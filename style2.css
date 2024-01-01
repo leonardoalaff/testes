@@ -17,9 +17,20 @@
     --cor6: rgb(242, 255, 255);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
+}
+
 input {
     position: relative;
-    right: -100%;
     opacity: 0;
 }
 
@@ -54,6 +65,7 @@ nav {
 }
 
 .ul.active {
+    z-index: 10;
     transform: translateX(0);
 }
 
@@ -85,13 +97,15 @@ nav {
 
 /**************** SESSÃO 1 ****************/
 .sessao1 {
+    background-color: blue;
     background: var(--cor6);
     height: 100vh;
-    width: 100%;
+    width: 100vh;
     overflow-x: hidden;
 }
 
 .rolagem-verduras {
+    overflow-x: hidden;
     display: flex;
     align-items: end;
     height: 100vh;
@@ -105,15 +119,29 @@ nav {
     height: 200px;
     transition: 0.3s linear;
     overflow: hidden;
+    box-shadow: 10px 10px 25px black;
 }
 
 .label-alface {
-    background-color: var(--cor2);
+    background: url('imagens/bgalface.svg');
+    transition: 0.3s linear;
 }
 .label-alface.active {
     height: 500px;
     top: 100px;
     border-radius: 50px;
+    background: url('imagens/bgalface2.svg');
+}
+
+.label-tomate {
+    background: url('imagens/bg-tomate.svg');
+    transition: 0.3s linear;
+}
+.label-tomate.active {
+    height: 500px;
+    top: 100px;
+    border-radius: 50px;
+    background: url('imagens/bg-tomate2.svg');
 }
 
 .texto {
@@ -124,7 +152,13 @@ nav {
 }
 
 .h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 100px;
     transition: 0.3s linear;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 20px;
 }
 .h1.active {
     letter-spacing: 10px;
