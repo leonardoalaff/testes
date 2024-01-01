@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cor1: rgb(15, 77, 43);
+    --cor2: rgb(255, 94, 0);
+    --cor3: rgb(255, 176, 72);
+    --cor4: rgb(138, 162, 167);
+    --cor5: rgb(178, 228, 230);
+    --cor6: rgb(242, 255, 255);
+}
+
+input {
+    position: relative;
+    right: -100%;
+    opacity: 0;
+}
+
+
+/**************** HEADER E MENU ****************/
+header {
+    background-color: var(--cor1);
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    list-style: none;
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    height: 100vh;
+    width: 60%;
+    transition: transform 0.3s linear;
+}
+
+.ul.active {
+    transform: translateX(0);
+}
+
+.ul li {
+    margin: 30px 20px;
+    letter-spacing: 5px;
+}
+
+
+
+.icone-menu {
+    transform: scale(2);
+    color: white;
+}
+
+.icone-menu-listras {
+}
+.icone-menu-listras.active {
+    display: none;
+}
+
+.icone-menu-x {
+    display: none;
+}
+.icone-menu-x.active {
+    display: block;
+}
+
+
+/**************** SESSÃO 1 ****************/
+.sessao1 {
+    background: var(--cor6);
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.rolagem-verduras {
+    display: flex;
+    align-items: end;
+    height: 100vh;
+}
+
+.label {
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    width: 300px;
+    height: 200px;
+    transition: 0.3s linear;
+    overflow: hidden;
+}
+
+.label-alface {
+    background-color: var(--cor2);
+}
+.label-alface.active {
+    height: 500px;
+    top: 100px;
+    border-radius: 50px;
+}
+
+.texto {
+    color: var(--cor6);
+    margin: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.h1 {
+    transition: 0.3s linear;
+}
+.h1.active {
+    letter-spacing: 10px;
+}
+
+.preco-texto {
+opacity: 0;
+margin: 30px;
+transition: 0.3s linear;
+}
+
+.preco-texto.active {
+    margin-top: 80px;
+    opacity: 100%;
+}
+
+.textop {
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.textop.active {
+    margin-top: 80px;
+    opacity: 100%;
+}

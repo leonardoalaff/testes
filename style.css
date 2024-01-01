@@ -17,7 +17,7 @@ body {
 
 .texto-alface.active {
     background-color: rgba(0, 0, 0, 0.37);
-    padding-bottom: 300px;
+    height: 600px;
     position: relative;
     bottom: -25vh;
     border-radius: 20px 20px 40px 40px;
@@ -25,9 +25,9 @@ body {
 
 .texto-tomate.active {
     background-color: rgba(0, 0, 0, 0.37);
-    padding-bottom: 300px;
+    padding-bottom: 600px;
     position: relative;
-    bottom: -6vh;
+    bottom: -25vh;
     border-radius: 20px 20px 40px 40px;
 }
 
@@ -102,6 +102,7 @@ body {
 
 .card {
     box-shadow: 10px 10px 15px black;
+    overflow: hidden;
 }
 
 .texto-alface, .texto-tomate {
@@ -116,10 +117,12 @@ body {
 .alface2, .tomate2 {
     transition: transform 0.5s linear;
     opacity: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .alface2.active, .tomate2.active {
-    transform: scale(1.1) translate(-7px, 150px);
+    transform: scale(1.1) translate(-7px, 190px);
     opacity: 100%;
 }
 
